@@ -1,9 +1,0 @@
-# Archivos temporales
-*.tmp
-*.temp
-*.log
-~$*
-
-# Carpetas temporales (pero no borra la carpeta, solo su contenido temporal)
-temp/
-tmp/
