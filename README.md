@@ -35,5 +35,9 @@ Anthony Joel Romero Yaguana
 Estudiante de Ingeniería en Sistemas – Paralelo B
 
 ---
+## 📁 Carpetas del repositorio
+
+- 📂 [tareas](tareas/) – Contiene los ejercicios por semana.
+
 
 > 📌 Repositorio en constante actualización durante el avance del curso.
