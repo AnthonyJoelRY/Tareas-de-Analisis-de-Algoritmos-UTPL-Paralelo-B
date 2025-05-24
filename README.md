@@ -1,5 +1,7 @@
 # Tareas_Analisis_Algoritmos_Anthony_Joel_Romero_Yaguana
 Repositorio destinado a las tareas de análisis de algoritmos del estudiante Anthony Joel Romero Yaguana paralelo B.
+![image](https://github.com/user-attachments/assets/530ffc16-35fa-4eca-bb10-413855449099)
+
 # 📘 Tareas de Análisis de Algoritmos – Paralelo B
 
 Este repositorio contiene el desarrollo de tareas y ejercicios correspondientes a la asignatura de **Análisis de Algoritmos**, cursada en el Paralelo B. Aquí se documentan de forma ordenada las actividades prácticas realizadas a lo largo del semestre, con el objetivo de reforzar los conceptos vistos en clase mediante la implementación de algoritmos, análisis de eficiencia, pruebas de escritorio, y solución de problemas algorítmicos.
