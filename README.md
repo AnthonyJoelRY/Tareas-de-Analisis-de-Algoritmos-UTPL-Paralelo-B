@@ -38,6 +38,6 @@ Estudiante de Ingeniería en Sistemas – Paralelo B
 ## 📁 Carpetas del repositorio
 
 - 📂 [tareas](tareas/) – Contiene los ejercicios por semana.
-- 📂 - [Wiki con los resumenes y mas]([https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki/Semana_9](https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki/(Home)-%F0%9F%A7%A0Resumen-de-Clases-y-Tareas-%E2%80%93-An%C3%A1lisis-de-Algoritmos))
+- 📂 - [Wiki con los resumenes y mas]([https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki/Semana_9](https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki/(Home)-%F0%9F%A7%A0Resumen-de-Clases-y-Tareas-%E2%80%93-An%C3%A1lisis-de-Algoritmos)
 
 > 📌 Repositorio en constante actualización durante el avance del curso.
