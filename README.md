@@ -19,16 +19,6 @@ Este repositorio contiene el desarrollo de tareas y ejercicios correspondientes 
 - Estudiar la eficiencia y complejidad temporal de diferentes algoritmos.
 - Documentar procesos mediante pruebas de escritorio, análisis de casos y uso de recurrencias.
 
-## ✏️ Contenido
-
-Algunos temas abordados incluyen:
-
-- Recurrencias y ecuaciones de tiempo de ejecución
-- Análisis de casos (mejor, medio y peor)
-- Algoritmo de Fibonacci recursivo
-- Comparación entre enfoques recursivos y optimizados
-- Instrumentación y conteo de llamadas recursivas
-
 ## 👨‍💻 Autor
 
 Anthony Joel Romero Yaguana  
