@@ -28,6 +28,7 @@ Estudiante de Ingeniería en Sistemas – Paralelo B
 ## 📁 Contenido del repositorio
 
 - 📂 [tareas](tareas/) – Contiene los ejercicios por semana.
-- 📂 - [Wiki con los resumenes y mas] - https://acortar.link/8zDLCC
+- 📂 - [Wiki con los resumenes y mas] 
+- https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki
 
 > 📌 Repositorio en constante actualización durante el avance del curso.
