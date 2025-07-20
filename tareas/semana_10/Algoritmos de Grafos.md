@@ -70,6 +70,8 @@ El algoritmo de **Dijkstra** permite calcular el **camino más corto** desde un 
 
 ### 📈 Complejidad:
 - Con cola de prioridad: **O((V + E) log V)** usando un heap binario.
+### Trabajo en Clases:
+![Imagen de WhatsApp 2025-07-20 a las 10 20 27_67362bf4](https://github.com/user-attachments/assets/fd1b431a-1b25-4d30-a498-84cb9ccb8864)
 
 🧾 **Resumen elaborado por**: Anthony Joel Romero Yaguana  
 📅 **Fecha de actualización**: 21/06/2025  
