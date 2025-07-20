@@ -108,9 +108,59 @@ Se utiliza para trazar el recorrido del algoritmo y verificar su exactitud paso 
 La búsqueda binaria demuestra cómo el paradigma *divide y vencerás* puede optimizar procesos, reduciendo el tiempo de ejecución de **Θ(n)** a **Θ(log n)**. Esta eficiencia la convierte en un recurso fundamental en estructuras ordenadas.
 
 ---
-### Trabajo en Clases:
-https://utpl-my.sharepoint.com/:x:/g/personal/ajromero12_utpl_edu_ec/EZtcV-N6yCxPsmodZMAkqQABy3na_ATSQ_UkZrrhFoEizA?e=B7YZdb
+## Trabajo En Clases:
+https://utpl-my.sharepoint.com/:x:/g/personal/ajromero12_utpl_edu_ec/EZtcV-N6yCxPsmodZMAkqQABy3na_ATSQ_UkZrrhFoEizA?e=uAc2b4
 
-📘 _Curso: Análisis de Algoritmos - UTPL_  
-📅 _Fecha: 16/06/2025_  
-👨‍💻 _Alumno: Anthony Joel Romero Yaguana_
+### Taller:
+```java
+public class MergeSort {
+
+    public static void mergeSort(int[] arr, int inicio, int fin) {
+        if (inicio >= fin) return;
+
+        int medio = (inicio + fin) / 2;
+        mergeSort(arr, inicio, medio);
+        mergeSort(arr, medio + 1, fin);
+        merge(arr, inicio, medio, fin);
+    }
+
+    private static void merge(int[] arr, int inicio, int medio, int fin) {
+        int[] temp = new int[fin - inicio + 1];
+        int i = inicio, j = medio + 1, k = 0;
+
+        // Mezclar las dos mitades
+        while (i <= medio && j <= fin) {
+            temp[k++] = (arr[i] <= arr[j]) ? arr[i++] : arr[j++];
+        }
+
+        // Copiar cualquier elemento restante del lado izquierdo
+        while (i <= medio) temp[k++] = arr[i++];
+
+        // Copiar cualquier elemento restante del lado derecho
+        while (j <= fin) temp[k++] = arr[j++];
+
+        // Copiar de vuelta al arreglo original
+        System.arraycopy(temp, 0, arr, inicio, temp.length);
+    }
+
+    public static void main(String[] args) {
+        int[] datos = {12, 3, 7, 9, 14, 6, 11, 2};
+
+        System.out.println("Arreglo original:");
+        imprimir(datos);
+
+        mergeSort(datos, 0, datos.length - 1);
+
+        System.out.println("Arreglo ordenado:");
+        imprimir(datos);
+    }
+
+    private static void imprimir(int[] arr) {
+        for (int n : arr) System.out.print(n + " ");
+        System.out.println();
+    }
+}
+```
+### Resultado:
+<img width="749" height="689" alt="image" src="https://github.com/user-attachments/assets/66a0141a-6f87-4892-b16e-52bee6e63c52" />
+
