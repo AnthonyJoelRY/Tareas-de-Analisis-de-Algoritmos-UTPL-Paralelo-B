@@ -108,6 +108,8 @@ Se utiliza para trazar el recorrido del algoritmo y verificar su exactitud paso 
 La búsqueda binaria demuestra cómo el paradigma *divide y vencerás* puede optimizar procesos, reduciendo el tiempo de ejecución de **Θ(n)** a **Θ(log n)**. Esta eficiencia la convierte en un recurso fundamental en estructuras ordenadas.
 
 ---
+### Trabajo en Clases:
+https://utpl-my.sharepoint.com/:x:/g/personal/ajromero12_utpl_edu_ec/EZtcV-N6yCxPsmodZMAkqQABy3na_ATSQ_UkZrrhFoEizA?e=B7YZdb
 
 📘 _Curso: Análisis de Algoritmos - UTPL_  
 📅 _Fecha: 16/06/2025_  
