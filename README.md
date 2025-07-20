@@ -1,5 +1,11 @@
 # Tareas_Analisis_Algoritmos_Anthony_Joel_Romero_Yaguana
 Repositorio destinado a las tareas de análisis de algoritmos del estudiante Anthony Joel Romero Yaguana paralelo B.
+## 📁 Contenido del repositorio
+
+- 📂 [tareas](tareas/) – Contiene los ejercicios por semana.
+- 📂 - [Wiki con los resumenes y mas] 
+- https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki
+
 ![image](https://github.com/user-attachments/assets/530ffc16-35fa-4eca-bb10-413855449099)
 
 # 📘 Tareas de Análisis de Algoritmos – Paralelo B
@@ -25,10 +31,5 @@ Anthony Joel Romero Yaguana
 Estudiante de Ingeniería en Sistemas – Paralelo B
 
 ---
-## 📁 Contenido del repositorio
-
-- 📂 [tareas](tareas/) – Contiene los ejercicios por semana.
-- 📂 - [Wiki con los resumenes y mas] 
-- https://github.com/AnthonyJoelRY/Tareas-de-Analisis-de-Algoritmos-UTPL-Paralelo-B/wiki
 
 > 📌 Repositorio en constante actualización durante el avance del curso.
