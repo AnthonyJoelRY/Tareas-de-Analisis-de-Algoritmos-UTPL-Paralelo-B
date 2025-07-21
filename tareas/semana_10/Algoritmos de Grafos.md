@@ -70,8 +70,86 @@ El algoritmo de **Dijkstra** permite calcular el **camino más corto** desde un 
 
 ### 📈 Complejidad:
 - Con cola de prioridad: **O((V + E) log V)** usando un heap binario.
-### Trabajo en Clases:
-![Imagen de WhatsApp 2025-07-20 a las 10 20 27_67362bf4](https://github.com/user-attachments/assets/fd1b431a-1b25-4d30-a498-84cb9ccb8864)
+### Tarea en Casa:
+### Aplicación para determinar el camino mínimo a partir de un grafo dirigido
+### Código:
+```java
+import java.util.*;
+
+public class CaminoMinimoDijkstra {
+
+    static class Arista {
+        int destino;
+        int peso;
+
+        Arista(int destino, int peso) {
+            this.destino = destino;
+            this.peso = peso;
+        }
+    }
+
+    public static void dijkstra(List<List<Arista>> grafo, int origen) {
+        int n = grafo.size();
+        int[] distancia = new int[n];
+        Arrays.fill(distancia, Integer.MAX_VALUE);
+        distancia[origen] = 0;
+
+        PriorityQueue<int[]> cola = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        cola.add(new int[]{origen, 0});
+
+        while (!cola.isEmpty()) {
+            int[] actual = cola.poll();
+            int nodo = actual[0];
+            int dist = actual[1];
+
+            if (dist > distancia[nodo]) continue;
+
+            for (Arista arista : grafo.get(nodo)) {
+                int nuevoDist = distancia[nodo] + arista.peso;
+                if (nuevoDist < distancia[arista.destino]) {
+                    distancia[arista.destino] = nuevoDist;
+                    cola.add(new int[]{arista.destino, nuevoDist});
+                }
+            }
+        }
+
+        System.out.println("Distancias mínimas desde el nodo " + origen + ":");
+        for (int i = 0; i < distancia.length; i++) {
+            System.out.println("A nodo " + i + ": " + (distancia[i] == Integer.MAX_VALUE ? "Inalcanzable" : distancia[i]));
+        }
+    }
+
+    public static void main(String[] args) {
+        int nodos = 5; // número de nodos del grafo
+        List<List<Arista>> grafo = new ArrayList<>();
+
+        for (int i = 0; i < nodos; i++) {
+            grafo.add(new ArrayList<>());
+        }
+
+        // Añadir aristas: grafo.get(origen).add(new Arista(destino, peso));
+        grafo.get(0).add(new Arista(1, 10));
+        grafo.get(0).add(new Arista(3, 5));
+        grafo.get(1).add(new Arista(2, 1));
+        grafo.get(1).add(new Arista(3, 2));
+        grafo.get(2).add(new Arista(4, 4));
+        grafo.get(3).add(new Arista(1, 3));
+        grafo.get(3).add(new Arista(2, 9));
+        grafo.get(3).add(new Arista(4, 2));
+        grafo.get(4).add(new Arista(0, 7));
+        grafo.get(4).add(new Arista(2, 6));
+
+        int nodoOrigen = 0;
+        dijkstra(grafo, nodoOrigen);
+    }
+}
+
+```
+### Ejecución:
+<img width="1439" height="840" alt="image" src="https://github.com/user-attachments/assets/98e8c5cd-738a-4deb-99cd-15ec6d7fcde4" />
+
+## Taller hecho en clase:
+![Imagen de WhatsApp 2025-07-20 a las 10 20 27_3f07864f](https://github.com/user-attachments/assets/5403d365-bc26-4315-a3a2-2d6e827e0d28)
 
 🧾 **Resumen elaborado por**: Anthony Joel Romero Yaguana  
 📅 **Fecha de actualización**: 21/06/2025  
