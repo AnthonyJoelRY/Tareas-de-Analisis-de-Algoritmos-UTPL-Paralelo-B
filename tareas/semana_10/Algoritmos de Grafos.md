@@ -74,6 +74,8 @@ El algoritmo de **Dijkstra** permite calcular el **camino más corto** desde un 
 ### Aplicación para determinar el camino mínimo a partir de un grafo dirigido
 ### Código:
 ```java
+package grafodirigido;
+
 import java.util.*;
 
 public class CaminoMinimoDijkstra {
@@ -91,7 +93,9 @@ public class CaminoMinimoDijkstra {
     public static void dijkstra(List<List<Arista>> grafo, int origen) {
         int n = grafo.size();
         int[] distancia = new int[n];
+        int[] predecesor = new int[n]; // Para reconstruir el camino
         Arrays.fill(distancia, Integer.MAX_VALUE);
+        Arrays.fill(predecesor, -1);
         distancia[origen] = 0;
 
         PriorityQueue<int[]> cola = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
@@ -108,26 +112,47 @@ public class CaminoMinimoDijkstra {
                 int nuevoDist = distancia[nodo] + arista.peso;
                 if (nuevoDist < distancia[arista.destino]) {
                     distancia[arista.destino] = nuevoDist;
+                    predecesor[arista.destino] = nodo; // Guardamos por dónde llegamos
                     cola.add(new int[]{arista.destino, nuevoDist});
                 }
             }
         }
 
-        System.out.println("Distancias mínimas desde el nodo " + origen + ":");
+        // Imprimir resultado con camino completo
+        System.out.println("Rutas mas cortas desde el nodo " + origen + ":\n");
         for (int i = 0; i < distancia.length; i++) {
-            System.out.println("A nodo " + i + ": " + (distancia[i] == Integer.MAX_VALUE ? "Inalcanzable" : distancia[i]));
+            if (distancia[i] == Integer.MAX_VALUE) {
+                System.out.println("Nodo " + i + " es inalcanzable.");
+            } else {
+                System.out.print("Ruta al nodo " + i + " : ");
+                imprimirRuta(predecesor, i);
+                System.out.println(" (Costo: " + distancia[i] + ")");
+            }
+        }
+    }
+
+    // Función para imprimir el camino usando el arreglo de predecesores
+    public static void imprimirRuta(int[] predecesor, int destino) {
+        List<Integer> ruta = new ArrayList<>();
+        for (int actual = destino; actual != -1; actual = predecesor[actual]) {
+            ruta.add(actual);
+        }
+        Collections.reverse(ruta);
+        for (int i = 0; i < ruta.size(); i++) {
+            System.out.print(ruta.get(i));
+            if (i < ruta.size() - 1) System.out.print(" -> ");
         }
     }
 
     public static void main(String[] args) {
-        int nodos = 5; // número de nodos del grafo
+        int nodos = 5;
         List<List<Arista>> grafo = new ArrayList<>();
 
         for (int i = 0; i < nodos; i++) {
             grafo.add(new ArrayList<>());
         }
 
-        // Añadir aristas: grafo.get(origen).add(new Arista(destino, peso));
+        // Aristas: origen → destino (peso)
         grafo.get(0).add(new Arista(1, 10));
         grafo.get(0).add(new Arista(3, 5));
         grafo.get(1).add(new Arista(2, 1));
@@ -144,9 +169,10 @@ public class CaminoMinimoDijkstra {
     }
 }
 
+
 ```
 ### Ejecución:
-<img width="1439" height="840" alt="image" src="https://github.com/user-attachments/assets/98e8c5cd-738a-4deb-99cd-15ec6d7fcde4" />
+<img width="1491" height="877" alt="image" src="https://github.com/user-attachments/assets/b4a883c9-349e-4745-bbe8-f67dde5fda0c" />
 
 ## Taller hecho en clase:
 ![Imagen de WhatsApp 2025-07-20 a las 10 20 27_3f07864f](https://github.com/user-attachments/assets/5403d365-bc26-4315-a3a2-2d6e827e0d28)
